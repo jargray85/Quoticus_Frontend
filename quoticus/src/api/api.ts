@@ -1,15 +1,28 @@
 import axios from "axios";
 
-// define database URL
-const API_URL = process.env.DATABASE_URL || ''
+// define URL to backend
+const URL = "http://localhost:8000/api/v1"
 
-// fetch quotes
+// fetch authors
 export const getAuthors = async () => {
+
     try {
-        const response = await axios.get(`${API_URL}/api/v1/authors`)
+        const response = await axios.get(`${URL}/authors`)
+        console.log(response.data)
         return response.data
     } catch (error) {
-        console.error('Error fetching quotes:', error)
+        console.error('Error fetching authors:', error)
+        throw error
+    }
+}
+
+// fetch quotes by author
+export const getAuthorQuotes = async (authorName: string) => {
+    try {
+        const response = await axios.get(`${URL}/authors/${authorName}/quotes`)
+        return response.data
+    } catch (error) {
+        console.error('Error fetching quotes by auther:', error)
         throw error
     }
 }

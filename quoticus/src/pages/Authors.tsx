@@ -1,8 +1,9 @@
 import React, { useEffect, useState} from "react";
+import { Link } from 'react-router-dom'
 import { getAuthors } from '../api/api'
 
 
-const Quotes = () => {
+const Authors = () => {
     const [authors, setAuthors] = useState([])
 
     useEffect(() => {
@@ -16,21 +17,17 @@ const Quotes = () => {
             setAuthors(response.data)
         } catch (error) {
             console.error('Error fetching quotes:', error)
+            
         }
     }
 
     return (
         <div>
-            <h1>Quotes</h1>
+            <h1>Quotes by Author</h1>
             <ul>
                 {authors.map((author: any) => (
                     <li key={author.id}>
-                        <strong>{author.name}</strong>
-                        <ul>
-                            {author.quotes.map((quote: any) => (
-                                <li key={quote.id}>{quote.text}</li>
-                            ))}
-                        </ul>
+                        <Link to={`/authors/${author.name}/quotes`}>{author.name}</Link>
                     </li>
 
                 ))}
@@ -39,4 +36,4 @@ const Quotes = () => {
     )
 }
 
-export default Quotes
+export default Authors
