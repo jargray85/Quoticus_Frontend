@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Authors from './pages/Authors';
 import AuthorQuotes from './pages/AuthorQuotes';
+import Categories from "./pages/Categories"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/authors" element={<Authors />} />
           <Route path="/authors/:authorName/quotes" element={<AuthorQuotes />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
       </Router>
     </div>

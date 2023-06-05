@@ -26,3 +26,13 @@ export const getAuthorQuotes = async (authorName: string) => {
         throw error
     }
 }
+
+// fetch categories
+export const getCategories = async () => {
+    try {
+        const response = await axios.get(`${URL}/categories`)
+        return response.data
+    } catch (error) {
+        throw error
+    }
+}

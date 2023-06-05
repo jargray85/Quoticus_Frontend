@@ -2,7 +2,7 @@ import React, { useEffect, useState} from "react";
 import { Link } from 'react-router-dom'
 import { getAuthors } from '../api/api'
 
-
+// Authors function
 const Authors = () => {
     const [authors, setAuthors] = useState([])
 
