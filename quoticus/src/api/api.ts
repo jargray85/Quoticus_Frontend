@@ -36,3 +36,14 @@ export const getCategories = async () => {
         throw error
     }
 }
+
+// fetch quotes by category
+export const getCategoryQuotes = async (categoryName: string) => {
+    try {
+        const response = await axios.get(`${URL}/categories/${categoryName}/quotes`)
+        return response.data
+    } catch (error) {
+        console.error('Error fetching quotes by category:', error)
+        throw error
+    }
+}

@@ -4,6 +4,7 @@ import './App.css';
 import Authors from './pages/Authors';
 import AuthorQuotes from './pages/AuthorQuotes';
 import Categories from "./pages/Categories"
+import CategoryQuotes from "./pages/CategoryQuotes"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/authors" element={<Authors />} />
           <Route path="/authors/:authorName/quotes" element={<AuthorQuotes />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/categories/:categoryName/quotes" element={<CategoryQuotes />} />
         </Routes>
       </Router>
     </div>
