@@ -4,6 +4,7 @@ import './App.css'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import Register from './pages/Register'
+import Login from './pages/Login'
 import Authors from './pages/Authors'
 import AuthorQuotes from './pages/AuthorQuotes'
 import Categories from "./pages/Categories"
@@ -24,7 +25,8 @@ function App() {
         <NavBar isLoggedIn={isLoggedIn} onLogout={handleLogout} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path='/register' element={<Register />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/authors" element={<Authors />} />
           <Route path="/authors/:authorName/quotes" element={<AuthorQuotes />} />
           <Route path="/categories" element={<Categories />} />
