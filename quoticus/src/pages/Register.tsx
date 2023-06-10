@@ -79,7 +79,7 @@ const Register = () => {
         {errorMessage && <p>{errorMessage}</p>}
         {successMessage && <p>{successMessage}</p>}
       </form>
-        </div>
+      </div>
     )
 }
 
