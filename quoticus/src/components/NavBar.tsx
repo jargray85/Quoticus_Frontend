@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "react-router-dom"
-import { registerUser, loginUser, logoutUser } from '../api/authApi'
+import { logoutUser } from '../api/authApi'
 
 interface NavbarProps {
     isLoggedIn: boolean,
@@ -9,9 +9,9 @@ interface NavbarProps {
 
 
 const NavBar = ({isLoggedIn, onLogout}: NavbarProps) => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
+    // const [email, setEmail] = useState('')
+    // const [password, setPassword] = useState('')
+    // const [confirmPassword, setConfirmPassword] = useState('')
     
 
     // handle logout function to backend
