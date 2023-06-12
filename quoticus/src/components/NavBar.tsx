@@ -25,34 +25,7 @@ const NavBar = ({isLoggedIn, onLogout}: NavbarProps) => {
         }
     }
 
-    // // handle registration 
-    // const handleRegister = async () => {
-    //     try {
-    //         // execture registration
-    //         await registerUser(email, password)
-    //         // update fields
-    //         setEmail('')
-    //         setPassword('')
-    //         setConfirmPassword('')
-    //     } catch (error) {
-    //         console.error('Registration failed:', error)
-    //         console.log(error)
-    //     }
-    // }
-
-    // // handle login
-    // const handleLogin = async () => {
-    //     try {
-    //         // execute login
-    //         await loginUser(email, password)
-    //         // update fields
-    //         setEmail('')
-    //         setPassword('')
-    //     } catch (error) {
-    //         console.error('Login failed:', error)
-    //         console.log(error)
-    //     }
-    // }
+    
 
     return (
         <nav>
