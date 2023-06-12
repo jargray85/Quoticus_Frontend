@@ -2,66 +2,56 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getCategoryQuotes } from '../api/api'
 
-interface Author {
+interface Quote {
     id: number
-    name: string
     date: string
+    name: string
     quote: string
     source: string
 }
 
-interface CategoryQuotesResponse {
-    authors: Author[]
-    category_name: string
-    status: number
-}
-
 const CategoryQuotes = () => {
-    const { categoryName } = useParams();
-    const [authors, setAuthors] = useState<Author[]>([])
+    const { categoryName } = useParams<{ categoryName: string }>();
+    const [quotes, setQuotes] = useState<Quote[]>([])
 
     useEffect(() => {
         if (categoryName) {
-            fetchCategoryQuotes()
+            fetchCategoryQuotes(categoryName)
         }
     }, [categoryName])
 
-    const fetchCategoryQuotes = async () => {
+    const fetchCategoryQuotes = async (categoryName: string) => {
         try {
-            console.log('Fetching category quotes...')
-
-            const response = await getCategoryQuotes(categoryName!)
+            const response = await getCategoryQuotes(categoryName)
             console.log('API Response:', response)
-
-            if (response && response.status === 200 && response.data && response.data.authors) {
-                setAuthors(response.data.authors)
-            } else {
-                setAuthors([])
-            }
-        } catch (error) {
+            setQuotes(response.authors || [])
+            console.log('Quotes:', response.authors)
+          } catch (error) {
             console.error('Error fetching category quotes:', error)
-        }
+            setQuotes([])
+          }
     };
 
-    console.log('Authors:', authors);
+    console.log('Category Name:', categoryName)
+    console.log('Quotes:', quotes)
 
     return (
         <div>
             <h1>Quotes about {categoryName}</h1>
 
-            {authors.length > 0 ? (
+            {quotes.length > 0 ? (
                 <ul>
-                    {authors.map((author) => (
-                        <li key={author.id}>
-                            <h2>{author.name}</h2>
-                            <p>Date: {author.date}</p>
-                            <p>Quote: {author.quote}</p>
-                            <p>Source: {author.source}</p>
+                    {quotes.map((quote) => (
+                        <li key={quote.id}>
+                            <h2>{quote.name}</h2>
+                            <p>Date: {quote.date}</p>
+                            <p>Quote: {quote.quote}</p>
+                            <p>Source: {quote.source}</p>
                         </li>
                     ))}
                 </ul>
             ) : (
-                <p>No authors found for the category.</p>
+                <p>No quotes found for this category.</p>
             )}
         </div>
     )

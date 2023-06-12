@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { registerUser } from "../api/authApi"
 
 const Register = () => {
   const [email, setEmail] = useState('')
@@ -7,7 +8,7 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState('')
   const [successMessage, setSuccessMessage] = useState('')
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     // Validation
@@ -16,33 +17,23 @@ const Register = () => {
       return
     }
 
-    // POST to backend
-    fetch("/register", {
-      method: "POST",
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password})
-    })
-    .then((response) => response.json())
-    .then((data) => {
-      // response from backend
-      if (data.status === 201) {
-        // success
-        setSuccessMessage(data.message)
-        setErrorMessage('')
-        setEmail('')
-        setPassword('')
-        setConfirmPassword('')
-      } else if (data.status === 409) {
-        // user with email already exists
-        setErrorMessage(data.message)
-        setSuccessMessage('')
-      }
-    })
-    .catch((error) => {
-      // handle error
-      setErrorMessage('An error occurred during registration.')
-      setSuccessMessage('')
-    })
+    try {
+      // Call the registerUser function from authApi.ts
+      await registerUser(email, password);
+      
+      // Registration successful
+      setSuccessMessage("Registration successful");
+      setErrorMessage("");
+      setEmail("");
+      setPassword("");
+      setConfirmPassword("");
+    } catch (error) {
+      // Registration failed
+      setErrorMessage("An error occurred during registration.");
+      setSuccessMessage("");
+      console.error("Registration failed:", error);
+    }
+
   }
     return (
         <div>
