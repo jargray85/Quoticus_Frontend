@@ -28,8 +28,8 @@ const AuthorQuotes = () => {
     console.log("Quotes:", quotes);
 
     return (
-        <div>
-            <h1>Quotes by {authorName}</h1>
+        <div className="author-quote-container">
+            <h2>Quotes by {authorName}</h2>
             <ul>
                 {quotes.map((quote, index) => (
                 <li key={index}>{quote}</li>

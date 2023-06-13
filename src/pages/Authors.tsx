@@ -22,7 +22,7 @@ const Authors = () => {
     }
 
     return (
-        <div>
+        <div className="authors-container">
             <h2>Quotes by Author</h2>
             <ul>
                 {authors.map((author: any) => (

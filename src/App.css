@@ -17,6 +17,12 @@ h1 {
   margin-bottom: 1.5em;
 }
 
+h2 {
+  color: antiquewhite;
+  font-size: 4em;
+  margin-bottom: 1.5em;
+}
+
 nav {
   padding: 0 20px;
 }
@@ -76,4 +82,41 @@ nav ul li a:hover {
 .image-style {
   width: 20em; 
   height: auto; 
+}
+
+.authors-container ul {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 0;
+}
+
+.authors-container li {
+  margin-bottom: 10px; 
+}
+
+.authors-container li a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.authors-container li a:hover {
+  text-decoration: none;
+}
+
+.author-quote-container ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.author-quote-container ul li {
+  margin-bottom: 10px; /* Add margin-bottom for spacing */
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 2em;
 }

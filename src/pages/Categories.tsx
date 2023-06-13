@@ -21,7 +21,7 @@ const Categories = () => {
 
     return (
         <div>
-            <h1>Categories</h1>
+            <h2>Categories</h2>
             <ul>
                 {categories.map((category: any) => (
                     <li key={category.id}>
