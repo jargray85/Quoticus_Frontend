@@ -23,7 +23,7 @@ const Authors = () => {
 
     return (
         <div>
-            <h1>Quotes by Author</h1>
+            <h2>Quotes by Author</h2>
             <ul>
                 {authors.map((author: any) => (
                     <li key={author.id}>

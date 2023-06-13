@@ -1,38 +1,51 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Gideon+Roman&family=Graduate&family=Rampart+One&display=swap');
+
+body {
+  background-color: darkred;
   text-align: center;
+  font-family: 'Gideon Roman', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style-type: none;
+  display: inline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: antiquewhite;
+  font-size: 6em;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  padding: 0 20px; /* Add padding to create space */
+}
+
+nav ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style-type: none;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li.nav-home {
+  margin-right: auto;
+}
+
+nav ul li a {
+  color: antiquewhite; 
+  text-decoration: none; 
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Add underline on hover */
 }

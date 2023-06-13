@@ -30,25 +30,25 @@ const NavBar = ({isLoggedIn, onLogout}: NavbarProps) => {
     return (
         <nav>
       <ul>
-        <li>
+        <li className="nav-home">
           <Link to="/">Home</Link>
         </li>
         {!isLoggedIn && (
           <>
-            <li>
+            <li className="nav-register">
               <Link to="/register">Register</Link>
             </li>
-            <li>
+            <li className="nav-login">
               <Link to="/login">Login</Link>
             </li>
           </>
         )}
         {isLoggedIn && (
           <>
-            <li>
+            <li className="nav-account">
               <Link to="/account">Account</Link>
             </li>
-            <li>
+            <li className="nav-logout">
               <button onClick={handleLogout}>Logout</button>
             </li>
           </>
