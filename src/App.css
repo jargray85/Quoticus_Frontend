@@ -14,11 +14,11 @@ li {
 h1 {
   color: antiquewhite;
   font-size: 6em;
-  
+  margin-bottom: 1.5em;
 }
 
 nav {
-  padding: 0 20px; /* Add padding to create space */
+  padding: 0 20px;
 }
 
 nav ul {
@@ -47,5 +47,33 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline; 
+}
+
+.link-container ul {
+  display: flex; 
+  justify-content: center; 
+}
+
+.link-container li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 6em; 
+}
+
+.link-container a {
+  text-decoration: none; 
+  color: antiquewhite; 
+  font-weight: bold; 
+  font-size: 3em;
+}
+
+.link-container a:hover {
+  text-decoration: underline; 
+}
+
+.image-style {
+  width: 20em; 
+  height: auto; 
 }
