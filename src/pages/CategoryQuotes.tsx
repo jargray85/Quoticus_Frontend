@@ -36,17 +36,17 @@ const CategoryQuotes = () => {
     console.log('Quotes:', quotes)
 
     return (
-        <div>
-            <h1>Quotes about {categoryName}</h1>
+        <div className='category-quotes-container'>
+            <h2>Quotes about {categoryName}</h2>
 
             {quotes.length > 0 ? (
                 <ul>
                     {quotes.map((quote) => (
                         <li key={quote.id}>
-                            <h2>{quote.name}</h2>
-                            <p>Date: {quote.date}</p>
-                            <p>Quote: {quote.quote}</p>
-                            <p>Source: {quote.source}</p>
+                            <h3>{quote.name}</h3>
+                            <p className='quote'>{quote.quote}</p>
+                            <p className='date'>Date: {quote.date}</p>
+                            <p className='source'>Source: {quote.source}</p>
                         </li>
                     ))}
                 </ul>

@@ -23,6 +23,12 @@ h2 {
   margin-bottom: 1.5em;
 }
 
+h3 {
+  color: antiquewhite;
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+}
+
 nav {
   padding: 0 20px;
 }
@@ -119,4 +125,46 @@ nav ul li a:hover {
   color: antiquewhite;
   font-weight: bold;
   font-size: 2em;
+}
+
+.categories-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.categories-container li {
+  margin-bottom: 10px;
+}
+
+.categories-container li a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.categories-container li a:hover {
+  text-decoration: underline;
+}
+
+.category-quotes-container li h3 {
+  color: lightgray;
+  margin-bottom: 0.5em; 
+}
+
+.category-quotes-container li p {
+  margin-top: 0.5em;
+}
+
+.category-quotes-container p.quote {
+  color: antiquewhite;
+  font-size: 1.8em; 
+}
+
+.category-quotes-container p.date,
+.category-quotes-container p.source {
+  color: rgb(163, 159, 159);
+  font-size: 1em; 
 }

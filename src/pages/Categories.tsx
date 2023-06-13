@@ -20,7 +20,7 @@ const Categories = () => {
     }
 
     return (
-        <div>
+        <div className="categories-container">
             <h2>Categories</h2>
             <ul>
                 {categories.map((category: any) => (
