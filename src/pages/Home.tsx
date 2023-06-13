@@ -1,13 +1,15 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import greekPillars from "../assets/greek-pillars.png"
+import laurel from "../assets/laurel.png"
 
 
 // Home page
 const Home = () => {
     return (
-        <div>
+        <div className="container">
           <h1>"Quoticus"</h1>
+          <img src={laurel} alt="laurel leaf" className="home-image" />
           <div className="link-container">
             <ul>
               <li className="home-link">
