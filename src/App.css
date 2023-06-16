@@ -71,6 +71,10 @@ nav ul li a:hover {
   text-decoration: underline; 
 }
 
+.link-container {
+  margin-left: -1.5em;
+}
+
 .link-container ul {
   display: flex; 
   justify-content: center; 
