@@ -17,6 +17,7 @@ h1 {
   margin-bottom: 1.5em;
   text-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
   margin-top: 0;
+  cursor: pointer;
 }
 
 h2 {
@@ -176,4 +177,64 @@ nav ul li a:hover {
 .category-quotes-container p.source {
   color: rgb(163, 159, 159);
   font-size: 1em; 
+}
+
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .home-image {
+    margin-top: -8em;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
+
+  .link-container a {
+    font-size: 2em;
+  }
+
+  .image-style {
+    width: 15em;
+  }
+
+  .authors-container li a {
+    font-size: 1.5em;
+  }
+
+  .author-quote-container ul li {
+    font-size: 1.5em;
+  }
+
+  .categories-container li a {
+    font-size: 1.5em;
+  }
+
+  .category-quotes-container p.quote {
+    font-size: 1.2em;
+  }
+
+  .category-quotes-container p.date,
+  .category-quotes-container p.source {
+    font-size: 0.8em;
+  }
 }
