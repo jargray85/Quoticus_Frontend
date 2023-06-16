@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getAuthorQuotes } from "../api/api";
 import laurelWreathIcon from "../assets/laurel-wreath.png"
 
@@ -31,6 +31,9 @@ const AuthorQuotes = () => {
     return (
         <div className="author-quote-container">
             <h2>Quotes by {authorName}</h2>
+            <p className="back-link">
+                <Link to="/authors">Back to Authors</Link>
+            </p>
             <ul>
                 {quotes.map((quote, index) => (
                 <li key={index}>

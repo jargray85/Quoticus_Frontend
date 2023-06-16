@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { getCategoryQuotes } from '../api/api'
 import quoteIcon from '../assets/laurel-wreath.png'
 
@@ -39,7 +39,9 @@ const CategoryQuotes = () => {
     return (
         <div className='category-quotes-container'>
             <h2>Quotes about {categoryName}</h2>
-
+            <p className="back-link">
+                <Link to="/categories">Back to Categories</Link>
+            </p>
             {quotes.length > 0 ? (
                 <ul>
                     {quotes.map((quote) => (
