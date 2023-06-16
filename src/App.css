@@ -203,6 +203,9 @@ nav ul li a:hover {
 
   .home-image {
     margin-top: -8em;
+    width: 10em; 
+    max-width: 100%;
+    height: auto;
   }
 
   nav ul li a {
