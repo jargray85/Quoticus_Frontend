@@ -8,17 +8,20 @@ import laurel from "../assets/laurel.png"
 const Home = () => {
   const [showMotto, setShowMotto] = useState(false);
 
-  const handleToggleMotto = () => {
-    setShowMotto(!showMotto)
+  const handleShowMotto = () => {
+    setShowMotto(true)
   }
 
 
     return (
         <div className="container">
-          <h1 onClick={handleToggleMotto}>"Quoticus"</h1>
-          {showMotto && (
-          <h5>Quotes from the dead, to better the living</h5>
-          )}
+          <Link to="#" className="home-link" onClick={handleShowMotto}>
+            <h1>Quoticus</h1>
+          </Link>
+              {showMotto && <h5>Quotes from the dead, to better the living</h5>}
+              <br></br>
+              <br></br>
+              <br></br>
           <img src={laurel} alt="laurel leaf" className="home-image" />
           <div className="link-container">
             <ul>
