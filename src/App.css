@@ -218,8 +218,16 @@ nav ul li a:hover {
     margin-bottom: 1em;
   }
 
+  h5 {
+    color: antiquewhite;
+    font-size: 1em;
+    margin-top: -2em;
+    margin-bottom: 2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
   .home-image {
-    margin-top: -8em;
+    margin-top: -12em;
     width: 20em; 
     max-width: 100%;
     height: auto;
