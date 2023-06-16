@@ -146,11 +146,18 @@ nav ul li a:hover {
 }
 
 .author-quote-container ul li {
-  margin-bottom: 10px; 
+  margin-bottom: 2em; 
   color: antiquewhite;
   font-weight: bold;
   font-size: 2em;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.quote-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.5em;
 }
 
 .categories-container ul {

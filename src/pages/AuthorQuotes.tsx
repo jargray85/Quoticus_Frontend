@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getAuthorQuotes } from "../api/api";
+import laurelWreathIcon from "../assets/laurel-wreath.png"
 
 // Author Quotes function
 const AuthorQuotes = () => {
@@ -32,7 +33,10 @@ const AuthorQuotes = () => {
             <h2>Quotes by {authorName}</h2>
             <ul>
                 {quotes.map((quote, index) => (
-                <li key={index}>{quote}</li>
+                <li key={index}>
+                    <img src={laurelWreathIcon} alt="Icon" className="quote-icon" />
+                    {quote}
+                    </li>
                 ))}
             </ul>
         </div>

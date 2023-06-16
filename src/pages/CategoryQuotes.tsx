@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getCategoryQuotes } from '../api/api'
+import quoteIcon from '../assets/laurel-wreath.png'
 
 interface Quote {
     id: number
@@ -47,6 +48,7 @@ const CategoryQuotes = () => {
                             <p className='quote'>{quote.quote}</p>
                             <p className='date'>Date: {quote.date}</p>
                             <p className='source'>Source: {quote.source}</p>
+                            <img src={quoteIcon} alt="quote icon" className="quote-icon" />
                         </li>
                     ))}
                 </ul>
