@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className="container">
           <Link to="#" className="home-link" onClick={handleShowMotto}>
-            <h1>Quoticus</h1>
+            <h1>"Quoticus"</h1>
           </Link>
               {showMotto && <h5>Quotes from the dead, to better the living</h5>}
               <br></br>
