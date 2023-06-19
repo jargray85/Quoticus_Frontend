@@ -292,6 +292,11 @@ nav ul li a:hover {
     font-size: 1.5em;
   }
 
+  .category-quotes-container ul {
+    margin-left: 0; 
+    padding-left: 10px; 
+  }
+
   .categories-container li a {
     font-size: 1.5em;
   }
