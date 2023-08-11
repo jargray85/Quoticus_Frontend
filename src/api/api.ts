@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // define URL to backend
-const URL = "https://quoticus.herokuapp.com/api/v1"
+const URL = "http://localhost:8000/api/v1"
 
 // fetch authors
 export const getAuthors = async () => {
