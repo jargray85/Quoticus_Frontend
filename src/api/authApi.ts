@@ -11,17 +11,14 @@ const AUTH_URL = "http://localhost:8000/api/v1/users"
 // User registration
 export const registerUser = async (email: string, password: string) => {
     try {
-        // Send preflight OPTIONS request
-        await axiosInstance.options(AUTH_URL)
-        
         // Send the actual POST request
-        const response = await axiosInstance.post(AUTH_URL, {
+        const response = await axiosInstance.post(`${AUTH_URL}/register`, {
             email,
             password
         })
         return response.data;
     } catch (error) {
-        throw error
+        throw error;
     }
 }
 
